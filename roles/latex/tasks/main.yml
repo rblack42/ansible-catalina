@@ -1,0 +1,15 @@
+---
+- name: install mactex
+  homebrew_cask:
+    name=mactex
+    state=present
+
+- name: install TeXMaker
+  homebrew_cask:
+    name=texmaker
+    state=present
+
+- name: install spell checker
+  homebrew:
+    name=hunspell
+    state=present

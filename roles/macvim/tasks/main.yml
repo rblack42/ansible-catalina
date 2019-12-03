@@ -1,0 +1,22 @@
+---
+- name: install macvim
+  homebrew_cask:
+    name: macvim
+    state: present
+
+- name: install editorconfig
+  homebrew:
+    name: editorconfig
+    state: present
+
+- name: install Vundle
+  git:
+      repo: https://github.com/VundleVim/Vundle.Vim.git
+      dest: ~/.vim/bundle/Vundle.vim
+
+- name: create .vimrc
+  template:
+    src: vimrc.j2
+    dest: "~/.vimrc"
+    mode: "0644"
+  notify: Install macvim plugins

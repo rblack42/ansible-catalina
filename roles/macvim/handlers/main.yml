@@ -1,0 +1,4 @@
+---
+- name: Install macvim plugins
+  command: vim +PluginInstall +qall
+

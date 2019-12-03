@@ -1,0 +1,11 @@
+---
+- hosts: local
+  connection: local
+  roles:
+    - setup
+    - macvim
+    - docker
+    - latex
+    - chrome
+    - mas
+

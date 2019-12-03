@@ -1,0 +1,5 @@
+---
+- name: install macvim
+  homebrew_cask:
+    name=arduino
+    state=present

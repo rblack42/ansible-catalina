@@ -1,0 +1,12 @@
+---
+vundle:
+  - "fatih/vim-go"
+  - "editorconfig/editorconfig-vim"
+
+set:
+  - tabstop=4
+  - shiftwidth=4
+  - 
+  - spell
+  - spelllang=en
+  - number

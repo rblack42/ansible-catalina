@@ -1,0 +1,15 @@
+---
+- name: install mysql
+  homebrew:
+    name: mysql
+    state: present
+
+- name: start mysql at login
+  file: 
+    src=/usr/local/opt/mysql/homebrew.mxcl.mysql.plist
+    path=~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+    state=link
+    force=yes
+
+- name: sertup launch agent for services
+  command: launchctl /Users/rblack/Library/LaunchAgents/homebrew.mxcl.mysql.plist
